@@ -7,11 +7,12 @@ var game;
 var s;
 var focus;
 var points;
+var touchEnable;
 
 function setup() {	// (windowWidth, windowHeight);
 	gameSizeX = floor((windowWidth - 40) / 20) * 20;
 	gameSizeY = floor((windowHeight - 40) / 20) * 20;
-
+	touchEnable = detectmob();
   createCanvas(gameSizeX, gameSizeY);
   backcolor = color(120, 155, 180);
   fillcolor = color(100, 200, 130);
@@ -61,4 +62,34 @@ function keyPressed() {
       break;
     default:
   }
+}
+
+function touchStarted() {
+	if (touchEnable) {
+		var deltaX = game.transformEllipse(s.x) - mouseX;
+		var deltaY = game.transformEllipse(s.y) - mouseY;
+		var a = atan2(deltaY, deltaX);
+		var deg = degrees(a);
+		if (deg >= 135) {
+			if (s.dir != 1) {
+      	s.dir = 0;
+      }
+		} else if (deg >= 45) {
+			if (s.dir != 3) {
+				s.dir = 2;
+			}
+		} else if (deg >= -45) {
+			if (s.dir != 0) {
+	      s.dir = 1;
+			}
+		} else if (deg >= -135) {
+			if (s.dir != 2) {
+      	s.dir = 3;
+			}
+		} else {
+			if (s.dir != 1) {
+      	s.dir = 0;
+      }
+		}
+	}
 }
