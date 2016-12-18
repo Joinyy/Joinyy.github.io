@@ -28,6 +28,7 @@ function snake() {
 	}
 	this.kill = function() {
 		this.length = 0;
+		points = 0;
 		this.x = floor((game.xMax - 1) / 2);
 	  this.y = floor((game.yMax - 1) / 2);
 		game.clearEntity();
