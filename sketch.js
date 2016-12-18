@@ -92,4 +92,5 @@ function touchStarted() {
       }
 		}
 	}
+	return false;
 }
