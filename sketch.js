@@ -10,9 +10,16 @@ var points;
 var touchEnable;
 
 function setup() {	// (windowWidth, windowHeight);
-	gameSizeX = floor((windowWidth - 40) / 20) * 20;
-	gameSizeY = floor((windowHeight - 40) / 20) * 20;
+
 	touchEnable = detectmob();
+	if (touchEnable) {
+		gameSizeX = floor((windowWidth - 100) / 40) * 40;
+		gameSizeY = floor((windowHeight - 100) / 40) * 40;
+		gridSize = 40;
+	} else {
+		gameSizeX = floor((windowWidth - 40) / 20) * 20;
+		gameSizeY = floor((windowHeight - 40) / 20) * 20;
+	}
   createCanvas(gameSizeX, gameSizeY);
   backcolor = color(120, 155, 180);
   fillcolor = color(100, 200, 130);
