@@ -94,3 +94,33 @@ function touchStarted() {
 	}
 	return false;
 }
+
+node.ontouchstart = function(evt){
+	if (touchEnable) {
+		var deltaX = game.transformEllipse(s.x) - evt.changedTouches[0].screenX;
+		var deltaY = game.transformEllipse(s.y) - evt.changedTouches[0].screenY;
+		var a = atan2(deltaY, deltaX);
+		var deg = degrees(a);
+		if (deg >= 135) {
+			if (s.dir != 1) {
+      	s.dir = 0;
+      }
+		} else if (deg >= 45) {
+			if (s.dir != 3) {
+				s.dir = 2;
+			}
+		} else if (deg >= -45) {
+			if (s.dir != 0) {
+	      s.dir = 1;
+			}
+		} else if (deg >= -135) {
+			if (s.dir != 2) {
+      	s.dir = 3;
+			}
+		} else {
+			if (s.dir != 1) {
+      	s.dir = 0;
+      }
+		}
+	}
+}
