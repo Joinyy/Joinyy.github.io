@@ -11,7 +11,7 @@ var touchEnable;
 var song;
 
 function preload() {
-	song = loadSound('snake.wav');
+	song = loadSound('snake.ogg');
 }
 
 function setup() {
