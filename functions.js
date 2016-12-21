@@ -23,6 +23,7 @@ function lostFocus() {
 		textFont("Verdana");
 		fill('rgba(80,100,200,1)');
 		text(str, gameSizeX / 2, gameSizeY / 2 + 7);
+		song.pause();
 	}
 }
 
@@ -30,6 +31,7 @@ function wonFocus() {
 	focus = true;
 	background(backcolor);
 	game.draw();
+	song.play();
 }
 
 function displayPoints() {
@@ -44,15 +46,13 @@ function displayPoints() {
 }
 
 function createArray(length) {
-		var arr = new Array(length || 0),
-				i = length;
+	var arr = new Array(length || 0), i = length;
 
-		if (arguments.length > 1) {
-				var args = Array.prototype.slice.call(arguments, 1);
-				while(i--) arr[length-1 - i] = createArray.apply(this, args);
-		}
-
-		return arr;
+	if (arguments.length > 1) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		while(i--) arr[length-1 - i] = createArray.apply(this, args);
+	}
+	return arr;
 }
 
 function detectmob() {
