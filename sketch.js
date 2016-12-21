@@ -8,9 +8,13 @@ var s;
 var focus;
 var points;
 var touchEnable;
+var song;
 
-function setup() {	// (windowWidth, windowHeight);
+function preload() {
+	song = loadSound('snake.wav');
+}
 
+function setup() {
 	touchEnable = detectmob();
 	if (touchEnable) {
 		gameSizeX = floor((windowWidth - 100) / 40) * 40;
@@ -31,6 +35,7 @@ function setup() {	// (windowWidth, windowHeight);
 	generateFood();
 	focus = true;
 	points = 0;
+	song.loop();
 }
 
 function draw() {
