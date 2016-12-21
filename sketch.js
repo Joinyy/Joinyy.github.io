@@ -9,6 +9,7 @@ var focus;
 var points;
 var touchEnable;
 var song;
+var playing;
 
 function preload() {
 	song = loadSound('snake.ogg');
@@ -35,7 +36,9 @@ function setup() {
 	generateFood();
 	focus = true;
 	points = 0;
+	setVolume(0.5);
 	song.loop();
+	playing = true;
 }
 
 function draw() {
@@ -72,6 +75,14 @@ function keyPressed() {
 				s.dir = 3;
 			}
 			break;
+		case SPACEBAR:
+			if (playing === true) {
+				song.pause();
+				playing = false;
+			} else {
+				song.play();
+				playing = true;
+			}
 		default:
 	}
 }
