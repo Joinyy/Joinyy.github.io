@@ -75,7 +75,7 @@ function keyPressed() {
 				s.dir = 3;
 			}
 			break;
-		case SPACEBAR:
+		case 32:
 			if (playing === true) {
 				song.pause();
 				playing = false;
