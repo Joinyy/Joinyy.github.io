@@ -36,8 +36,8 @@ function setup() {
 	generateFood();
 	focus = true;
 	points = 0;
-	song.setVolume(0.5);
 	song.loop();
+	song.setVolume(0.5);
 	playing = true;
 }
 
