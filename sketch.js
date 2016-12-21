@@ -36,7 +36,7 @@ function setup() {
 	generateFood();
 	focus = true;
 	points = 0;
-	setVolume(0.5);
+	song.setVolume(0.5);
 	song.loop();
 	playing = true;
 }
@@ -83,6 +83,7 @@ function keyPressed() {
 				song.play();
 				playing = true;
 			}
+			break;
 		default:
 	}
 }
