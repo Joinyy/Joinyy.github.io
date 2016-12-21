@@ -12,51 +12,51 @@ function generateFood() {
 function lostFocus() {
 	var str;
 	if (focus === true) {
-	  focus = false;
+		focus = false;
 		stroke('rgba(255,255,255,0.25)');
 		fill('rgba(128,255,128,0.25)');
 		strokeWeight(2);
-	  rect(20 , gameSizeY / 2 - 30, gameSizeX - 40, 60);
-	  str = "Paused";
-	  textAlign(CENTER);
-	  textSize(25);
-	  textFont("Verdana");
+		rect(20 , gameSizeY / 2 - 30, gameSizeX - 40, 60);
+		str = "Paused";
+		textAlign(CENTER);
+		textSize(25);
+		textFont("Verdana");
 		fill('rgba(80,100,200,1)');
-	  text(str, gameSizeX / 2, gameSizeY / 2 + 7);
+		text(str, gameSizeX / 2, gameSizeY / 2 + 7);
 	}
 }
 
 function wonFocus() {
-  focus = true;
+	focus = true;
 	background(backcolor);
 	game.draw();
 }
 
 function displayPoints() {
-  var str = nfs(points);
-  textAlign(LEFT);
+	var str = nfs(points);
+	textAlign(LEFT);
 	stroke('rgba(255,255,255,0.25)');
 	fill('rgba(128,255,128,0.75)');
 	strokeWeight(2);
-  textSize(15);
-  textFont("Verdana");
-  text("Punkte: " + str, 10, 20);
+	textSize(15);
+	textFont("Verdana");
+	text("Punkte: " + str, 10, 20);
 }
 
 function createArray(length) {
-    var arr = new Array(length || 0),
-        i = length;
+		var arr = new Array(length || 0),
+				i = length;
 
-    if (arguments.length > 1) {
-        var args = Array.prototype.slice.call(arguments, 1);
-        while(i--) arr[length-1 - i] = createArray.apply(this, args);
-    }
+		if (arguments.length > 1) {
+				var args = Array.prototype.slice.call(arguments, 1);
+				while(i--) arr[length-1 - i] = createArray.apply(this, args);
+		}
 
-    return arr;
+		return arr;
 }
 
 function detectmob() {
-	if(  navigator.userAgent.match(/Android/i)
+	if(	navigator.userAgent.match(/Android/i)
 		|| navigator.userAgent.match(/webOS/i)
 		|| navigator.userAgent.match(/iPhone/i)
 		|| navigator.userAgent.match(/iPad/i)
