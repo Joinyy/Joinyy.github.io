@@ -16,7 +16,7 @@ function preload() {
 	if (touchEnable) {
 		gameSizeX = floor((windowWidth - 100) / 40) * 40;
 		gameSizeY = floor((windowHeight - 100) / 40) * 40;
-		gridSize = 40;
+		gridSize = 20;
 		playing = false;
 	} else {
 		gameSizeX = floor((windowWidth - 40) / 20) * 20;
