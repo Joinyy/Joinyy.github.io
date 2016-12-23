@@ -23,7 +23,9 @@ function lostFocus() {
 		textFont("Verdana");
 		fill('rgba(80,100,200,1)');
 		text(str, gameSizeX / 2, gameSizeY / 2 + 7);
-		song.pause();
+		if (!touchEnable) {
+			song.pause();
+		}
 	}
 }
 
@@ -32,7 +34,9 @@ function wonFocus() {
 	background(backcolor);
 	game.draw();
 	if (!playing) {
-		song.play();
+		if (!touchEnable) {
+			song.play();
+		}
 	}
 }
 

@@ -12,19 +12,20 @@ var song;
 var playing;
 
 function preload() {
-	song = loadSound('snake.ogg');
-}
-
-function setup() {
 	touchEnable = detectmob();
 	if (touchEnable) {
 		gameSizeX = floor((windowWidth - 100) / 40) * 40;
 		gameSizeY = floor((windowHeight - 100) / 40) * 40;
 		gridSize = 40;
+		playing = false;
 	} else {
 		gameSizeX = floor((windowWidth - 40) / 20) * 20;
 		gameSizeY = floor((windowHeight - 40) / 20) * 20;
+		song = loadSound('snake.ogg');
 	}
+}
+
+function setup() {
 	createCanvas(gameSizeX, gameSizeY);
 	backcolor = color(120, 155, 180);
 	fillcolor = color(100, 200, 130);
@@ -36,9 +37,11 @@ function setup() {
 	generateFood();
 	focus = true;
 	points = 0;
-	song.loop();
-	song.setVolume(0.5);
-	playing = true;
+	if (!touchEnable) {
+		song.loop();
+		song.setVolume(0.5);
+		playing = true;
+	}
 }
 
 function draw() {
@@ -79,7 +82,7 @@ function keyPressed() {
 			if (playing === true) {
 				song.pause();
 				playing = false;
-			} else {
+			} else if (!touchEnable) {
 				song.play();
 				playing = true;
 			}
