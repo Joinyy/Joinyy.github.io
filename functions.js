@@ -31,7 +31,9 @@ function wonFocus() {
 	focus = true;
 	background(backcolor);
 	game.draw();
-	song.play();
+	if (!playing) {
+		song.play();
+	}
 }
 
 function displayPoints() {
