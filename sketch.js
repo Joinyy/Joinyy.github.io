@@ -19,8 +19,8 @@ function preload() {
 		gridSize = 20;
 		playing = false;
 	} else {
-		gameSizeX = floor((windowWidth - 40) / 20) * 20;
-		gameSizeY = floor((windowHeight - 40) / 20) * 20;
+		gameSizeX = 15 * 20;
+		gameSizeY = 15 * 20;
 		song = loadSound('snake.ogg');
 	}
 }
