@@ -1,0 +1,678 @@
+<!-- Credits to @KEVINGOTBOUNCE for the basic infrastructure and media processing of this doc. -->
+<html>
+  <head>
+    <title>Testemail für MBK Newsletter</title>
+    <meta charset=utf-8>
+    <style type="text/css">
+      /* OBLIGATORY EMAIL STYLES SO I DON'T GO CRAZY */
+      #outlook a{padding:0;}
+      .ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+      table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;}
+      img{-ms-interpolation-mode:bicubic;}
+      body{margin:0; padding:0;}
+      img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+      table{border-collapse:collapse !important;}
+      body{height:100% !important; margin:0; padding:0; width:100% !important;background-color:#f9fafa;}
+
+      /* BYE BYE BLUE LINKS + ORPHAN STYLE */
+      .appleFooter a {color:#999999 !important; text-decoration: none !important;}
+      .appleLink a {color:#ffffff !important; text-decoration: none !important;}
+      .padding-top {padding-top: 95px !important;}
+
+      /* WEB FONTS, CHYOU KNOWWW */
+      @media screen {
+          @font-face {
+              font-family: 'proxima_nova_rgregular';
+              src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+              src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+                   url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+                   url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+                   url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+              font-weight: normal;
+              font-style: normal;
+          }
+          @font-face {
+              font-family: 'proxima_nova_rgbold';
+              src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+              src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+                   url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+                   url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+                   url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+              font-weight: normal;
+              font-style: normal;
+          }
+
+          @font-face {
+              font-family: 'adelle_rgregular';
+              src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot');
+              src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'),
+                   url('https://litmus.com/fonts/Emails/adelle_reg-webfont.woff') format('woff'),
+                   url('https://litmus.com/fonts/Emails/adelle_reg-webfont.ttf') format('truetype'),
+                   url('https://litmus.com/fonts/Emails/adelle_reg-webfont.svg#adelle_rgregular') format('svg');
+              font-weight: normal;
+              font-style: normal;
+          }
+      }
+
+      /* DAT ANIMATION DOE */
+      .fadeInDown {
+          animation-name: fadeInDown;
+          -webkit-animation-name: fadeInDown;
+          animation-duration: 1.2s;
+          -webkit-animation-duration: 1.2s;
+      }
+      @keyframes fadeInDown {
+          0% {opacity: 0;transform: translateY(-30px);}
+          40% {opacity: 0;transform: translateY(-30px);}
+          100% {opacity: 1;transform: translateY(0);}
+      }
+      @-webkit-keyframes fadeInDown {
+          0% {opacity: 0;-webkit-transform: translateY(-30px);}
+          40% {opacity: 0;-webkit-transform: translateY(-30px);}
+          100% {opacity: 1;-webkit-transform: translateY(0);}
+      }
+      .fadeInDown2 {
+          animation-name: fadeInDown2;
+          -webkit-animation-name: fadeInDown2;
+          animation-duration: 1.6s;
+          -webkit-animation-duration: 1.6s;
+      }
+      @keyframes fadeInDown2 {
+          0% {opacity: 0;transform: translateY(-30px);}
+          50% {opacity: 0;transform: translateY(-30px);}
+          100% {opacity: 1;transform: translateY(0);}
+      }
+      @-webkit-keyframes fadeInDown2 {
+          0% {opacity: 0;-webkit-transform: translateY(-30px);}
+          50% {opacity: 0;-webkit-transform: translateY(-30px);}
+          100% {opacity: 1;-webkit-transform: translateY(0);}
+      }
+      .fadeInDown3 {
+          animation-name: fadeInDown3;
+          -webkit-animation-name: fadeInDown3;
+          animation-duration: 2s;
+          -webkit-animation-duration: 2s;
+      }
+      @keyframes fadeInDown3 {
+          0% {opacity: 0;transform: translateY(-30px);}
+          60% {opacity: 0;transform: translateY(-30px);}
+          100% {opacity: 1;transform: translateY(0);}
+      }
+      @-webkit-keyframes fadeInDown3 {
+          0% {opacity: 0;-webkit-transform: translateY(-30px);}
+          60% {opacity: 0;-webkit-transform: translateY(-30px);}
+          100% {opacity: 1;-webkit-transform: translateY(0);}
+      }
+      .fadeInDown4 {
+          animation-name: fadeInDown4;
+          -webkit-animation-name: fadeInDown4;
+          animation-duration: 2.4s;
+          -webkit-animation-duration: 2.4s;
+      }
+      @keyframes fadeInDown4 {
+          0% {opacity: 0;transform: translateY(-30px);}
+          66% {opacity: 0;transform: translateY(-30px);}
+          100% {opacity: 1;transform: translateY(0);}
+      }
+      @-webkit-keyframes fadeInDown4 {
+          0% {opacity: 0;-webkit-transform: translateY(-30px);}
+          66% {opacity: 0;-webkit-transform: translateY(-30px);}
+          100% {opacity: 1;-webkit-transform: translateY(0);}
+      }
+      @-webkit-keyframes rotateIn {
+          0% {
+              -webkit-transform-origin: center center;
+              transform-origin: center center;
+              -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+          }
+          100% {
+              -webkit-transform-origin: center center;
+              transform-origin: center center;
+              -webkit-transform: rotate(0);
+              transform: rotate(0);
+          }
+      }
+      @keyframes rotateIn {
+          0% {
+              -webkit-transform-origin: center center;
+              -ms-transform-origin: center center;
+              transform-origin: center center;
+              -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+          }
+          100% {
+              -webkit-transform-origin: center center;
+              -ms-transform-origin: center center;
+              transform-origin: center center;
+              -webkit-transform: rotate(0);
+              -ms-transform: rotate(0);
+              transform: rotate(0);
+          }
+      }
+      .rotateIn {
+          -webkit-animation: rotateIn 14s linear infinite;
+          animation: rotateIn 14s linear infinite;
+      }
+
+      /* INTERACTION */
+      .cta:hover {background: #ffffff url(http://pages.litmus.com/l/31032/2014-04-17/2hs7k/31032/17342/twitter_bg2.png) no-repeat !important;color: #444444 !important;}
+      .video-hover:hover {opacity:0.8 !important;}
+
+      /* MEDIA QUERY SCREEN 800px */
+      @media screen and (max-width: 800px), screen and (max-device-width: 800px) {
+          table[class="responsive-table"]{width:100%!important;}
+          td[class="block-padding"]{padding: 10px 5% 10px 5% !important;text-align: left;}
+          td[class="block-padding-center2"]{padding: 10px 5% 20px 5% !important;text-align: center;}
+          td[class="mobile-width"]{padding: 0 9% !important;}
+          td[class="section-padding"]{padding: 40px 15px !important;}
+          td[class="no-padding"]{padding: 0px !important;}
+          img[class="video-hover"]{width: 100% !important;height: auto !important;}
+          td[class="padding-top"]{padding-top: 40px !important;}
+          td[class="padding-cta-top"]{padding-top:25px !important;}
+          td[class="day-padding"]{padding-top:8px !important;}
+          img[class="rotateIn"]{width: 110px !important;height: auto !important;}
+          br[class="mobile-hide"]{display: none !important;}
+      }
+
+      /* MEDIA QUERY SCREEN 480px */
+      @media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+          td[class="details-header"]{font-size: 16px !important; line-height: 20px !important;}
+          td[class="date1"]{padding-top:20px !important;}
+          td[class="date2"]{padding-top:23px !important;font-size: 16px !important; line-height: 20px !important;}
+          img[class="tedc-logo"]{width: 175px !important;height:auto !important;padding-top:15px !important;}
+          img[class="rotateIn"]{width: 65px !important;height: auto !important;}
+          a[class="cta"]{font-size: 16px !important;}
+          td[class="padding-top"]{padding-top: 25px !important;}
+      }
+
+      /* MEDIA QUERY SCREEN 350px */
+      @media screen and (max-width: 350px), screen and (max-device-width: 350px) {
+          td[class="mobile-width"]{padding: 0 3% !important;}
+      }
+
+      /* FIREFOX MEDIA QUERY */
+      @-moz-document url-prefix() {
+          div[class="gmail-hide"]{display: block !important;max-height: none !important;overflow: visible !important;}
+          div[class="line1"]{display: block;border-top: 1px solid #d3d3d3;width: 30%;float: left;margin-top: 15px;}
+          div[class="format"]{width: 40%; display: block; float: left;}
+          div[class="line2"]{display: block;border-top: 1px solid #d3d3d3;width: 17%;float: left;margin-top: 15px;}
+          div[class="last-year"]{display: block; width: 66%; float: left;}
+          div[class="video-wrap"]{height: 730px;position: relative;overflow: hidden;padding:0;margin:0;}
+          div[class="overlay"]{height: 100%;position: relative;min-height: 100%;margin: 0 auto;padding: 0 20px;z-index:3;}
+      }
+
+      /* WEBKIT, CHROME, SAFARI MEDIA QUERY */
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+          div[class="line1"]{display: block;border-top: 1px solid #d3d3d3;width: 25%;float: left;margin-top: 15px;}
+          div[class="format"]{width: 50%; display: block; float: left;}
+          div[class="line2"]{display: block;border-top: 1px solid #d3d3d3;width: 17%;float: left;margin-top: 15px;}
+          div[class="last-year"]{display: block; width: 66%; float: left;}
+          div[class="video-wrap"]{height: 100%;height: 750px;position: relative;overflow: hidden;padding:0;margin:0;}
+          video[class="video"]{min-height: 100%; min-width: 100%;position: absolute;top: 0p;left: 0;z-index: 2;display:inline-block !important;}
+          div[class="overlay"]{height: 100%;position: relative;min-height: 100%;margin: 0 auto;padding: 0 20px;z-index:3;}
+          td[class="no-padding"]{padding: 0 !important;}
+          td[class="title"]{display: block !important; padding-top: 35px;}
+          td[class="webkit-hide"]{display: none !important;}
+      }
+
+      /* WEBKIT, CHROME, SAFARI MEDIA QUERY @ 800px */
+      @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 800px) {
+          div[class="video-wrap"]{height: 570px !important;}
+          a[class="cta"]{background: #ffffff url(http://pages.litmus.com/l/31032/2014-04-17/2hs7k/31032/17342/twitter_bg2.png) no-repeat !important;color: #444444 !important;}
+          div[class="line1"]{display:none;}
+          div[class="line2"]{display: none;}
+          div[class="last-year"]{width: 100%; font-size: 21px}
+          div[class="format"]{width: 100%; font-size: 21px}
+      }
+
+      /* WEBKIT, CHROME, SAFARI MEDIA QUERY @ 480px*/
+      @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 480px) {
+          div[class="video-wrap"]{height: 440px !important;}
+          video[class="video"]{top:-75px;left:-200px;}
+          td[class="title"]{padding-top: 15px;}
+          td[class="title-padding"]{padding-top:10px !important;}
+      }
+
+      /* iPAD MEDIA QUERY */
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+          video[class="video"]{display: none !important;z-index:-1;}
+      }
+
+      /* iPAD 1 & 2, iPAD MINI MEDIA QUERY */
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+          video[class="video"]{display: none !important;z-index:-1;}
+      }
+
+      /* RETINA iPAD MEDIA QUERY */
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+          video[class="video"]{display: none !important;z-index:-1;}
+      }
+
+      /* iPHONE 5 MEDIA QUERY */
+      @media screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1){
+          video[class="video"]{display: none !important;z-index:-1;}
+      }
+
+      /* iPHONE 5S MEDIA QUERY */
+      @media screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+          video[class="video"]{display: none !important;z-index:-1;}
+      }
+
+      /* iPHONE 2G/3G/3GS MEDIA QUERY */
+      @media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1){
+          video[class="video"]{display: none !important;z-index:-1;}
+      }
+
+      /* iPHONE 4/4S MEDIA QUERY */
+      @media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+          video[class="video"]{display: none !important;z-index:-1;}
+      }
+    </style>
+    <style type="text/css">
+</style>
+  </head>
+
+  <body bgcolor="#f9fafa">
+    <!-- PREHEADER TEXT -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td bgcolor="#444444" align="center" style="padding: 8px 0px;" class="webkit-hide">
+          <table border="0" cellpadding="0" cellspacing="0" width="800" class="responsive-table">
+            <tr>
+              <td align="center">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" style="padding: 0; display: none;">
+                      <div style="display:none;max-height:0px;overflow:hidden;">
+                        <a href="#" style="font-size: 14px; line-height: 20px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #aaaaaa; text-decoration: none;">Ein krasser Newsletter der MBK GmbH</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding: 0; font-size: 11px; line-height: 14px; font-family: Helvetica, Arial, sans-serif; color: #aaaaaa;"
+                    class="webkit-hide">Probleme bei der Darstellung? Schau dir diese Mail in Edge/Chrome/Safari an.</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- YES. HTML5 VIDEO BACKGROUND. IN AN EMAIL. BELIEVE IT. IM BRINGING SEXY BACK
+    TO EMAIL LIKE TIMBERLAKE DID TO POP. -->
+    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#f2ae44" width="100%">
+      <tr>
+        <!-- MAIN TD CELL W/ "FALLBACK" BACKGROUND IMAGE -->
+        <td align="center" bgcolor="#007070" style="padding: 0 0 50px 0; background-color: #007070; background-size: cover;"
+        class="no-padding" width="100%">
+          <!-- VIDEO WRAPPER DIV TO SET HEIGHT AND NO OVERFLOW. ONLY DISPLAY IN -WEBKIT.
+          -->
+          <!-- MAIN TD CELL W/ "FALLBACK" BACKGROUND IMAGE -->
+        <!-- <td align="center" bgcolor="#007070" style="padding: 0 0 50px 0; background-color: #007070; background: url(http://kessler-metall.de/wp-content/uploads/2015/02/Startseite_Bild.jpg) top center no-repeat;background-size: cover;"
+        class="no-padding" width="100%"> -->
+          <div class="video-wrap">
+            <!-- DA VIDEO. BLOW IT UP TO MIN HEIGHT/WIDTH OF PARENT WRAPPER. SET ABSOLUTE
+            POSITION/Z-INDEX SO IT'S BEHIND CONTENT. HIDE BY DEFAULT, ONLY SHOW IN -WEBKIT.
+            -->
+            <!-- <video autoplay="autoplay" loop="loop" class="video" style="display: none;">
+              <source src="https://litmus.com/videos/TEDC-short-clips-tinted-compressed.mp4"
+              type="video/mp4">
+            </video> -->
+            <!-- WRAP CONTENT IN DIV TO OVERLAY IT W/ HIGHER Z-INDEX THAN VIDEO DIV -->
+            <div class="overlay">
+              <table border="0" cellpadding="0" cellspacing="0" width="800" class="responsive-table">
+                <tr>
+                  <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="center">
+                          <table cellspacing="0" cellpadding="0" class="responsive-table" border="0">
+                            <tr>
+                              <td align="center" valign="top">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td align="center" colspan="2" style="padding-top: 65px;" class="padding-top">
+                                      <img src="http://pages.litmus.com/l/31032/2014-04-17/2hs6h/31032/17330/line_logo.png"
+                                      width="154" height="132" style="font-size: 28px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #ffffff;width:154px;height:132px;"
+                                      class="rotateIn" alt="">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" colspan="2" style="padding: 38px 0 5px 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7;" class="title-padding">
+                                      <h1>Metallbau Kessler</h1>
+                                      <h2>GmbH & Co.KG</h2>
+                                    </td>
+                                  </tr>
+							    </table>
+						      </td>
+					  		</tr>
+						  </table>
+					  </tr>
+					  <td align="center">
+						<table cellspacing="0" cellpadding="0" class="responsive-table" border="0">
+                                  <tr>
+                                    <td align="center" colspan="2" style="padding: 10px 0 5px 0; font-size: 18px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7;" class="title-padding">
+                                      <div class="fadeInDown"><span class="appleLink">Lädt ein zur Veranstaltung:<br>"Heftige Veranstaltung"</span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" class="mobile-width">
+                                      <table cellspacing="0" cellpadding="0">
+                                        <tr>
+                                          <td align="left" style="padding: 35px 10px 5px 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7;"
+                                          valign="top" width="21" class="date1">
+                                            <div class="fadeInDown">
+                                              <img src="http://pages.litmus.com/l/31032/2014-04-17/2hs6c/31032/17326/calendar.png"
+                                              width="21" height="25">
+                                            </div>
+                                          </td>
+                                          <td align="left" style="padding: 38px 0 5px 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7;"
+                                          class="date2">
+                                            <div class="fadeInDown"><span class="appleLink">August 18-20, 2014</span>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" style="padding: 15px 0 0 0;" class="mobile-width">
+                                      <table cellspacing="0" cellpadding="0">
+                                        <tr>
+                                          <td align="center" style="padding: 10px 10px 0 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7;"
+                                          valign="top" width="21">
+                                            <div class="fadeInDown2">
+                                              <img src="http://pages.litmus.com/l/31032/2014-04-17/2hs77/31032/17332/pin2.png"
+                                              width="21" height="25">
+                                            </div>
+                                          </td>
+                                          <td align="left" style="font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7; padding: 10px 10px 0 0;"
+                                          class="details-header">
+                                            <div class="fadeInDown2">
+                                              <a href="https://www.google.com/maps/place/200+Seaport+Blvd/@42.3506567,-71.0409877,17z/data=!4m2!3m1!1s0x89e3707853899d55:0xd4cf764242712e83?dg=dbrw&newdg=1"
+                                              target="_blank" style="text-decoration: none; color: #ffffff;">Sautierstraße 46
+                                                <br>Geisingen, Deutschland</a>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2" style="padding: 15px 0 0 0;" class="mobile-width">
+                                      <table cellspacing="0" cellpadding="0">
+                                        <tr>
+                                          <td align="center" style="padding: 10px 10px 0 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7;"
+                                          valign="top" width="21">
+                                            <div class="fadeInDown3">
+                                              <img src="http://pages.litmus.com/l/31032/2014-04-17/2hxl7/31032/17366/ticket.png"
+                                              width="21" height="25">
+                                            </div>
+                                          </td>
+                                          <td align="left" style="font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #ffffff; opacity: 0.7; padding: 10px 0 0 0;"
+                                          class="details-header">
+                                            <div class="fadeInDown3">Tickets on sale soon
+                                              <br><span style="font-size: 14px; line-height: 18px;">(Watch your inbox for details)</span>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" style="padding: 35px 0 0 0;" colspan="2" class="padding-cta-top">
+                                      <div class="fadeInDown4">
+                                        <a href="https://twitter.com/intent/tweet?text=Save+the+date+for+%MBKessler+in+Geisingen"
+                                        style="background-color:none;background-image:url(http://pages.litmus.com/l/31032/2014-04-17/2hsj1/31032/17348/twitter_bg.png);border:2px solid #ffffff;border-radius:25px;color:#ffffff;display:inline-block;font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;font-size:18px; line-height: 18px;text-decoration:none;padding: 12px 35px; opacity: 0.7; text-indent: 20px;"
+                                        target="_blank" class="cta">Share on Twitter</a>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <!-- WE GON' HAVE WORKSHOPS, KILLER KEYNOTES, & BALLER BREAKOUTS. ALSO, I'M STEADY
+    REPPIN' #TEAMOXFORDCOMMA. -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td bgcolor="#ffffff" align="center" style="padding: 70px 15px 70px 15px;" class="section-padding">
+          <table border="0" cellpadding="0" cellspacing="0" width="800" class="responsive-table">
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" style="font-size: 25px; font-family: 'adelle_rgregular', Helvetica, Arial, sans-serif; color: #666666;">
+                      <div class="line1"></div>
+                      <div class="format">Heftige Redner an drei Tagen</div>
+                      <div class="line1"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding: 20px 0 20px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999"
+                    class="block-padding-center2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+                  </tr>
+				  <tr>
+				  	<td align="center" style="padding: 20px 0 20px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999"
+                    class="block-padding-center2">
+					<table cellspacing="0" cellpadding="0" width="100%">
+					  <tr>
+						<td align="center" style="padding: 5px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif; color: #666666;"
+						bgcolor="#f0f0f0">Tag 1: Intermediate & Advanced Workshops</td>
+					  </tr>
+					  <tr>
+						<table cellspacing="0" cellpadding="0" width="100%">
+							<tr>
+								<td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999">10:00 - 12:00 Uhr</td>
+								<td align="center" style="padding: 15px; font-size: 18px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #555555"><b>Einführung:</b><br> <li>Unterprogrammpunkt 1</li> <li>Unterprogrammpunkt 2</li> </td>
+							</tr>
+							<tr>
+								<td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999">12:00 - 14:00 Uhr</td>
+								<td align="center" style="padding: 15px; font-size: 18px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #555555"><b>Weiterführung</b></td>
+							</tr>
+							<tr>
+								<td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999">14:00 - 18:00 Uhr</td>
+								<td align="center" style="padding: 15px; font-size: 18px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #555555"><b>Zuendeführung</b></td>
+							</tr>
+						</table>
+					  </tr>
+					</table>
+					<table cellspacing="0" cellpadding="0" width="100%">
+					  <tr>
+						<td align="center" style="padding: 5px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif; color: #666666;"
+						bgcolor="#f0f0f0">Tag 2: Nur Bilder anschauen</td>
+					  </tr>
+					  <tr>
+						<td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999"> <img src="http://www.bing.com/th?u=http%3a%2f%2fwww.bing.com%2faz%2fhprichbg%2frb%2fKingPhoto_DE-DE1591206150_AttributionImage.jpg&ehk=rcJPUYu932u8KjQptTVEKQ&w=520&h=200&rs=2&pid=14.1" width="75%" height="" alt=""> </td>
+					  </tr>
+					</table>
+					<table cellspacing="0" cellpadding="0" width="100%">
+					  <tr>
+						<td align="center" style="padding: 8px 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif; color: #666666;"
+						bgcolor="#f0f0f0">Überschrift 3, es geht auch größer!</td>
+					  </tr>
+					  <tr>
+						<td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+					  </tr>
+					</table>
+					</td>
+				  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding6" align="center">
+                      <table width="100%" border="0" cellspacing="0" style="border-collapse: collapse;"
+                      cellpadding="0" class="responsive-table">
+                        <tr>
+                          <td align="center">
+                            <table width="262" border="0" cellspacing="0" cellpadding="0" align="left" style="border: 4px solid #ffffff;"
+                            class="responsive-table">
+                              <tr>
+                                <td>
+                                  <table cellspacing="0" cellpadding="0" width="100%">
+                                    <tr>
+                                      <td style="border: 1px solid #dddddd;">
+                                        <table cellspacing="0" cellpadding="0" width="100%">
+                                          <tr>
+                                            <td align="center" style="padding: 5px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif; color: #666666;"
+                                            bgcolor="#f0f0f0">Tag 1 *</td>
+                                          </tr>
+                                          <tr>
+                                            <td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999">Intermediate & Advanced Workshops</td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <table width="262" border="0" cellspacing="0" cellpadding="0" align="left" style="border: 4px solid #ffffff;"
+                            class="responsive-table">
+                              <tr>
+                                <td class="day-padding">
+                                  <table cellspacing="0" cellpadding="0" width="100%">
+                                    <tr>
+                                      <td style="border: 1px solid #dddddd;">
+                                        <table cellspacing="0" cellpadding="0" width="100%">
+                                          <tr>
+                                            <td align="center" style="padding: 5px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif; color: #666666;"
+                                            bgcolor="#f0f0f0">Tag 2</td>
+                                          </tr>
+                                          <tr>
+                                            <td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999">General Sessions & Breakouts</td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            <table width="262" border="0" cellspacing="0" cellpadding="0" align="left" style="border: 4px solid #ffffff;"
+                            class="responsive-table">
+                              <tr>
+                                <td class="day-padding">
+                                  <table cellspacing="0" cellpadding="0" width="100%">
+                                    <tr>
+                                      <td style="border: 1px solid #dddddd;">
+                                        <table cellspacing="0" cellpadding="0" width="100%">
+                                          <tr>
+                                            <td align="center" style="padding: 5px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif; color: #666666;"
+                                            bgcolor="#f0f0f0">Tag 3</td>
+                                          </tr>
+                                          <tr>
+                                            <td align="center" style="padding: 15px; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999">General Sessions & Breakouts</td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr> -->
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- 2013 CONF WAS CRAY CHECK IT OUT -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td bgcolor="#f9fafa" align="center" style="padding: 70px 15px 70px 15px; border-top: 1px #d3d3d3 solid;"
+        class="section-padding">
+          <table border="0" cellpadding="0" cellspacing="0" width="800" class="responsive-table">
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" style="font-size: 25px; font-family: 'adelle_rgregular', Helvetica, Arial, sans-serif; color: #666666;">
+                      <div class="line2"></div>
+                      <div class="last-year">Videos über die Firma</div>
+                      <div class="line2"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding: 20px 0 20px 0; font-size: 16px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999;"
+                    class="block-padding-center2">Blablabla krasse Firma blablabla krasse Workshops.</td>
+                  </tr>
+                  <tr>
+                    <td class="block-padding" style="font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #999999;">
+                      <a href="https://youtu.be/hZReM0oRB5A"
+                      target="_blank">
+                        <img src="http://kessler-metall.de/wp-content/uploads/2015/08/Bildschirmfoto-2015-08-09-um-21.25.27-600x300.png"
+                        width="800" height="400" alt="GET YO POPCORN READY" border="0" class="video-hover"
+                        style="color: #999999; font-size: 46px;">
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- BUILT IN BOSTON -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td bgcolor="#f9fafa" align="center">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+            <tr>
+              <td style="padding: 0 0px 20px 0px;">
+                <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="responsive-table">
+                  <tr>
+                    <td align="center" valign="middle" style="font-size: 13px; line-height: 18px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999;">
+                      <a href="http://kessler-metall.de"
+                      target="_blank">
+                        <img src="http://kessler-metall.de/wp-content/uploads/2015/08/LOGOneu.png"
+                        width="100" height="" border="0" style="display: block;" alt="Litmus">
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="middle" style="font-size: 13px; line-height: 18px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #999999; padding-top: 15px;"> <span class="appleFooter" style="color: #999999;">Sautierstraße 46<br>Geisingen, Deutschland</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size: 13px; line-height: 18px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color:#999999; padding-top: 25px;"
+                    class="block-padding">Diese E-Mail erhalten Sie, da sie krass ist.
+                      <a href="%%email_preference_center%%" style="color:#999999;">unsubscribe</a>.</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+</html>
