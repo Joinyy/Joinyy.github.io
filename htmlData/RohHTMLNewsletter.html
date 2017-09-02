@@ -1,0 +1,386 @@
+<!-- Credits to @KEVINGOTBOUNCE for the basic infrastructure and media processing of this doc. -->
+<html>
+	<head>
+		<title>Großer Positionierungskongress auf Schloss Kranichstein</title>
+		<meta charset=utf-8>
+		<style type="text/css">
+			/* OBLIGATORY EMAIL STYLES SO I DON'T GO CRAZY */
+			#outlook a{padding:0;}
+			.ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+			body, table, td, a{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+			table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;}
+			img{-ms-interpolation-mode:bicubic;}
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table{border-collapse:collapse !important;}
+			body{height:100% !important; margin:0; padding:0; width:100% !important;background-color:#f9fafa;}
+
+			/* BYE BYE BLUE LINKS + ORPHAN STYLE */
+			.appleFooter a {color:#999999 !important; text-decoration: none !important;}
+			.appleLink a {color:#ffffff !important; text-decoration: none !important;}
+			.padding-top {padding-top: 95px !important;}
+
+			/* WEB FONTS, CHYOU KNOWWW */
+			@media screen {
+				@font-face {
+					font-family: 'proxima_nova_rgregular';
+					src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+					src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+						 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+						 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+						 url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+					font-weight: normal;
+					font-style: normal;
+				}
+				@font-face {
+					font-family: 'proxima_nova_rgbold';
+					src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+					src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+						 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+						 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+						 url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+					font-weight: normal;
+					font-style: normal;
+				}
+
+				@font-face {
+					font-family: 'adelle_rgregular';
+					src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot');
+					src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'),
+						url('https://litmus.com/fonts/Emails/adelle_reg-webfont.woff') format('woff'),
+						url('https://litmus.com/fonts/Emails/adelle_reg-webfont.ttf') format('truetype'),
+						url('https://litmus.com/fonts/Emails/adelle_reg-webfont.svg#adelle_rgregular') format('svg');
+					font-weight: normal;
+					font-style: normal;
+				}
+			}
+
+			/* DAT ANIMATION DOE */
+			.fadeInDown {
+				animation-name: fadeInDown;
+				-webkit-animation-name: fadeInDown;
+				animation-duration: 1.2s;
+				-webkit-animation-duration: 1.2s;
+			}
+			@keyframes fadeInDown {
+				0% {opacity: 0;transform: translateY(-30px);}
+				40% {opacity: 0;transform: translateY(-30px);}
+				100% {opacity: 1;transform: translateY(0);}
+			}
+			@-webkit-keyframes fadeInDown {
+				0% {opacity: 0;-webkit-transform: translateY(-30px);}
+				40% {opacity: 0;-webkit-transform: translateY(-30px);}
+				100% {opacity: 1;-webkit-transform: translateY(0);}
+			}
+			.fadeInDown2 {
+				animation-name: fadeInDown2;
+				-webkit-animation-name: fadeInDown2;
+				animation-duration: 1.6s;
+				-webkit-animation-duration: 1.6s;
+			}
+			@keyframes fadeInDown2 {
+				0% {opacity: 0;transform: translateY(-30px);}
+				50% {opacity: 0;transform: translateY(-30px);}
+				100% {opacity: 1;transform: translateY(0);}
+			}
+			@-webkit-keyframes fadeInDown2 {
+				0% {opacity: 0;-webkit-transform: translateY(-30px);}
+				50% {opacity: 0;-webkit-transform: translateY(-30px);}
+				100% {opacity: 1;-webkit-transform: translateY(0);}
+			}
+			.fadeInDown3 {
+				animation-name: fadeInDown3;
+				-webkit-animation-name: fadeInDown3;
+				animation-duration: 2s;
+				-webkit-animation-duration: 2s;
+			}
+			@keyframes fadeInDown3 {
+				0% {opacity: 0;transform: translateY(-30px);}
+				60% {opacity: 0;transform: translateY(-30px);}
+				100% {opacity: 1;transform: translateY(0);}
+			}
+			@-webkit-keyframes fadeInDown3 {
+				0% {opacity: 0;-webkit-transform: translateY(-30px);}
+				60% {opacity: 0;-webkit-transform: translateY(-30px);}
+				100% {opacity: 1;-webkit-transform: translateY(0);}
+			}
+			.fadeInDown4 {
+				animation-name: fadeInDown4;
+				-webkit-animation-name: fadeInDown4;
+				animation-duration: 2.4s;
+				-webkit-animation-duration: 2.4s;
+			}
+			@keyframes fadeInDown4 {
+				0% {opacity: 0;transform: translateY(-30px);}
+				66% {opacity: 0;transform: translateY(-30px);}
+				100% {opacity: 1;transform: translateY(0);}
+			}
+			@-webkit-keyframes fadeInDown4 {
+				0% {opacity: 0;-webkit-transform: translateY(-30px);}
+				66% {opacity: 0;-webkit-transform: translateY(-30px);}
+				100% {opacity: 1;-webkit-transform: translateY(0);}
+			}
+			@-webkit-keyframes rotateIn {
+				0% {
+					-webkit-transform-origin: center center;
+					transform-origin: center center;
+					-webkit-transform: rotate(-360deg);
+					transform: rotate(-360deg);
+				}
+				100% {
+					-webkit-transform-origin: center center;
+					transform-origin: center center;
+					-webkit-transform: rotate(0);
+					transform: rotate(0);
+				}
+			}
+			@keyframes rotateIn {
+				0% {
+					-webkit-transform-origin: center center;
+					-ms-transform-origin: center center;
+					transform-origin: center center;
+					-webkit-transform: rotate(-360deg);
+					transform: rotate(-360deg);
+				}
+				100% {
+					-webkit-transform-origin: center center;
+					-ms-transform-origin: center center;
+					transform-origin: center center;
+					-webkit-transform: rotate(0);
+					-ms-transform: rotate(0);
+					transform: rotate(0);
+				}
+			}
+			.rotateIn {
+				-webkit-animation: rotateIn 14s linear infinite;
+				animation: rotateIn 14s linear infinite;
+			}
+
+			/* INTERACTION */
+			.cta:hover {background: #ffffff url(http://pages.litmus.com/l/31032/2014-04-17/2hs7k/31032/17342/twitter_bg2.png) no-repeat !important;color: #444444 !important;}
+			.video-hover:hover {opacity:0.8 !important;}
+
+			/* MEDIA QUERY SCREEN 800px */
+			@media screen and (max-width: 800px), screen and (max-device-width: 800px) {
+				table[class="responsive-table"]{width:100%!important;}
+				td[class="block-padding"]{padding: 10px 5% 10px 5% !important;text-align: left;}
+				td[class="block-padding-center2"]{padding: 10px 5% 20px 5% !important;text-align: center;}
+				td[class="mobile-width"]{padding: 0 9% !important;}
+				td[class="section-padding"]{padding: 40px 15px !important;}
+				td[class="no-padding"]{padding: 0px !important;}
+				img[class="video-hover"]{width: 100% !important;height: auto !important;}
+				td[class="padding-top"]{padding-top: 40px !important;}
+				td[class="padding-cta-top"]{padding-top:25px !important;}
+				td[class="day-padding"]{padding-top:8px !important;}
+				img[class="rotateIn"]{width: 110px !important;height: auto !important;}
+				br[class="mobile-hide"]{display: none !important;}
+			}
+
+			/* MEDIA QUERY SCREEN 480px */
+			@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+				td[class="details-header"]{font-size: 16px !important; line-height: 20px !important;}
+				td[class="date1"]{padding-top:20px !important;}
+				td[class="date2"]{padding-top:23px !important;font-size: 16px !important; line-height: 20px !important;}
+				img[class="tedc-logo"]{width: 175px !important;height:auto !important;padding-top:15px !important;}
+				img[class="rotateIn"]{width: 65px !important;height: auto !important;}
+				a[class="cta"]{font-size: 16px !important;}
+				td[class="padding-top"]{padding-top: 25px !important;}
+			}
+
+			/* MEDIA QUERY SCREEN 350px */
+			@media screen and (max-width: 350px), screen and (max-device-width: 350px) {
+				td[class="mobile-width"]{padding: 0 3% !important;}
+			}
+
+			/* FIREFOX MEDIA QUERY */
+			@-moz-document url-prefix() {
+				div[class="gmail-hide"]{display: block !important;max-height: none !important;overflow: visible !important;}
+				div[class="line1"]{display: block;border-top: 1px solid #d3d3d3;width: 30%;float: left;margin-top: 15px;}
+				div[class="format"]{width: 40%; display: block; float: left;}
+				div[class="line2"]{display: block;border-top: 1px solid #d3d3d3;width: 17%;float: left;margin-top: 15px;}
+				div[class="last-year"]{display: block; width: 66%; float: left;}
+				div[class="video-wrap"]{height: 730px;position: relative;overflow: hidden;padding:0;margin:0;}
+				div[class="overlay"]{height: 100%;position: relative;min-height: 100%;margin: 0 auto;padding: 0 20px;z-index:3;}
+			}
+
+			/* WEBKIT, CHROME, SAFARI MEDIA QUERY */
+			@media screen and (-webkit-min-device-pixel-ratio: 0) {
+				div[class="line1"]{display: block;border-top: 1px solid #d3d3d3;width: 25%;float: left;margin-top: 15px;}
+				div[class="format"]{width: 50%; display: block; float: left;}
+				div[class="line2"]{display: block;border-top: 1px solid #d3d3d3;width: 17%;float: left;margin-top: 15px;}
+				div[class="last-year"]{display: block; width: 66%; float: left;}
+				div[class="video-wrap"]{height: 100%;height: 750px;position: relative;overflow: hidden;padding:0;margin:0;}
+				video[class="video"]{min-height: 100%; min-width: 100%;position: absolute;top: 0p;left: 0;z-index: 2;display:inline-block !important;}
+				div[class="overlay"]{height: 100%;position: relative;min-height: 100%;margin: 0 auto;padding: 0 20px;z-index:3;}
+				td[class="no-padding"]{padding: 0 !important;}
+				td[class="title"]{display: block !important; padding-top: 35px;}
+				td[class="webkit-hide"]{display: none !important;}
+			}
+
+			/* WEBKIT, CHROME, SAFARI MEDIA QUERY @ 800px */
+			@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 800px) {
+				div[class="video-wrap"]{height: 570px !important;}
+				a[class="cta"]{background: #ffffff url(http://pages.litmus.com/l/31032/2014-04-17/2hs7k/31032/17342/twitter_bg2.png) no-repeat !important;color: #444444 !important;}
+				div[class="line1"]{display:none;}
+				div[class="line2"]{display: none;}
+				div[class="last-year"]{width: 100%; font-size: 21px}
+				div[class="format"]{width: 100%; font-size: 21px}
+			}
+
+			/* WEBKIT, CHROME, SAFARI MEDIA QUERY @ 480px*/
+			@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 480px) {
+				div[class="video-wrap"]{height: 440px !important;}
+				video[class="video"]{top:-75px;left:-200px;}
+				td[class="title"]{padding-top: 15px;}
+				td[class="title-padding"]{padding-top:10px !important;}
+			}
+
+			/* iPAD MEDIA QUERY */
+			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+				video[class="video"]{display: none !important;z-index:-1;}
+			}
+
+			/* iPAD 1 & 2, iPAD MINI MEDIA QUERY */
+			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+				video[class="video"]{display: none !important;z-index:-1;}
+			}
+
+			/* RETINA iPAD MEDIA QUERY */
+			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+				video[class="video"]{display: none !important;z-index:-1;}
+			}
+
+			/* iPHONE 5 MEDIA QUERY */
+			@media screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1){
+				video[class="video"]{display: none !important;z-index:-1;}
+			}
+
+			/* iPHONE 5S MEDIA QUERY */
+			@media screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+				video[class="video"]{display: none !important;z-index:-1;}
+			}
+
+			/* iPHONE 2G/3G/3GS MEDIA QUERY */
+			@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 1){
+				video[class="video"]{display: none !important;z-index:-1;}
+			}
+
+			/* iPHONE 4/4S MEDIA QUERY */
+			@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+				video[class="video"]{display: none !important;z-index:-1;}
+			}
+		</style>
+	<style type="text/css"></style>
+</head>
+
+<body bgcolor="#f9fafa">
+	<!-- Preheader Warnung zwecks Darstellung -->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td bgcolor="#444444" align="center" style="padding: 8px 0px;" class="webkit-hide">
+				<table>
+					<tr>
+						<td align="center" style="padding: 0; font-size: 11px; line-height: 14px; font-family: Helvetica, Arial, sans-serif; color: #aaaaaa;"
+						class="webkit-hide">Probleme bei der Darstellung? Sehen Sie sich <span class="appleLink"><a href="https://joinyy.github.io/htmlData/OnlineView_Newsletter_0002.html">diese Mail</a></span> in Edge/Chrome/Safari an.</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="#FFFEFE">
+			<td align="right" style="padding: 20px 20px; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #1c2b39; opacity: 0.9;">
+				<img src="PZ_rechts.png" width="400" height=""><br>
+				<b>Donaueschingen</b>
+			</td>
+		</tr>
+		<tr bgcolor="#dc1135">
+			<td><br></td>
+		</tr>
+	</table>
+	<!-- Inhalt START: -->
+	<table bgcolor="#FFFEFE" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td align="center" bgcolor="989494" style="padding: 0 0 50px 0; background-color: #989494; background-size: cover;"
+	        class="no-padding" width="100%">
+				<table bgcolor="#989494" align="center" class="responsive-table">
+					<tr>
+						<td align="center" style="padding: 38px 0 5px 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #1c2b39; opacity: 0.9;">
+							<h1>Wir laden ein</h1><br>
+							<h2>zum großen Positionierungskongress auf Schloss Kranichstein</h2><br>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td><br><br><br></td>
+			<tr>
+				<td align="center" style="padding: 35px 10px 5px 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #1c2b39; opacity: 0.7;"
+				valign="top" width="21" class="date1">
+					<div class="fadeInDown">
+						Wann: xx.xx.20XX, Beginn um 17:00 Uhr
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="padding: 35px 10px 5px 0; font-size: 20px; line-height: 25px; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; color: #1c2b39; opacity: 0.7;"
+				valign="top" width="21" class="date1">
+					<div class="fadeInDown2">
+						Wo: Schloss Kranichstein, Kongresshalle 1C
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><br></td>
+			</tr>
+		</tr>
+		<tr align="center">
+			<table align="center" width="800px">
+				<tr>
+					<td><br></td>
+				</tr>
+				<tr>
+					<td align="center" style="font-size: 25px; font-family: 'adelle_rgregular', Helvetica, Arial, sans-serif; color: #666666;">
+						<div class="line1"></div>
+						<div class="format">Drei Redner referieren:</div>
+						<div class="line1"></div>
+					</td>
+				</tr>
+				<tr align="center">
+					<table align="center" cellpadding="20" cellspacing="20">
+						<tr width="700px" align="center" style="font-size: 20px; font-family: 'adelle_rgregular', Helvetica, Arial, sans-serif; color: #666666;">
+							<td width="33%">
+								<img src="PZ_rechts.png" width="200px"><br>
+								<b>Peter Sawtchenko</b><br>
+								<table align="left">
+									<tr align="left">
+										<li>Positionierungsexperte mit Auszeichnung</li>
+										<li>Autor und Referent</li>
+									</tr>
+								</table>
+							</td>
+							<td width="33%">
+								<img src="PZ_rechts.png" width="200px"><br>
+								<b>Vorname Nachname</b><br>
+								<table align="left">
+									<tr align="left">
+										<li>Punkt 1</li>
+										<li>Punkt 2</li>
+									</tr>
+								</table>
+							</td>
+							<td width="33%">
+								<img src="PZ_rechts.png" width="200px"><br>
+								<b>Vorname Nachname</b><br>
+								<table align="left">
+									<tr align="left">
+										<li>Punkt 1</li>
+										<li>Punkt 2</li>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</tr>
+			</table>
+		</tr>
+	</table>
+</body>
